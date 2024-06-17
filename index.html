@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Toastify Example</title>
+  <!-- Include Toastify CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+  <h1>Toastify Example</h1>
+
+  <!-- Your HTML content -->
+  <button class="btn btn-success" onclick="showSuccessToast()">Show Success Toast</button>
+  <button class="btn btn-outline-danger" onclick="showErrorToast()">Show Error Toast</button>
+  <button class="btn btn-outline-warning" onclick="showWarningToast()">Show Warning Toast</button>
+  <button class="btn btn-info" onclick="showInfoToast()">Show Info Toast</button>
+  <button class="btn btn-primary" onclick="showConfirmationToast()">Show Confirmation Toast</button>
+
+  <!-- Include Toastify JS -->
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- Your JavaScript logic -->
+  <script>
+    function showSuccessToast() {
+      Toastify({
+        text: "Task successfully completed!",
+        duration: 3000,
+        gravity: "bottom",
+        backgroundColor: "#5cb85c",
+      }).showToast();
+    }
+
+    function showErrorToast() {
+      Toastify({
+        text: "Error: Network connection lost.",
+        duration: 3000,
+        gravity: "bottom",
+        backgroundColor: "#d9534f",
+      }).showToast();
+    }
+
+    function showWarningToast() {
+      Toastify({
+        text: "Warning: Low battery!",
+        duration: 3000,
+        gravity: "top",
+        backgroundColor: "#f0ad4e",
+      }).showToast();
+    }
+
+    function showInfoToast() {
+      Toastify({
+        text: "Info: New updates available.",
+        duration: 3000,
+        gravity: "top",
+        backgroundColor: "#5bc0de",
+      }).showToast();
+    }
+
+    function showConfirmationToast() {
+      Toastify({
+        text: "You have successfully logged out.",
+        duration: 3000,
+        gravity: "bottom",
+        backgroundColor: "#428bca",
+      }).showToast();
+    }
+  </script>
+</body>
+</html>
